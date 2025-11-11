@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kognaris – Enterprise Intelligence. Reimagined.</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* Reset & Base */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #EEE;
+      background: #0d1117;
+      line-height:1.6;
+    }
+    a { text-decoration:none; color: inherit; }
+    img { max-width:100%; display:block; }
+
+    /* Utilities */
+    .container { width:90%; max-width:1200px; margin:0 auto; }
+    .section { padding:80px 0; }
+    h1,h2,h3 { color:#FFF; }
+    p { margin-top:0.5em; }
+
+    /* Buttons */
+    .btn {
+      display:inline-block;
+      font-weight:600;
+      border-radius:4px;
+      padding:0.75em 1.5em;
+      transition:0.2s;
+    }
+    .btn-primary {
+      background:#4f46e5;
+      color:#FFF;
+    }
+    .btn-primary:hover {
+      background:#3730a3;
+    }
+    .btn-secondary {
+      border:2px solid #4f46e5;
+      color:#4f46e5;
+    }
+    .btn-secondary:hover {
+      background:rgba(79,70,229,0.1);
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: url('b36f4cd3-91b7-436d-9369-86c3fc2d0216.png') center/cover no-repeat;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(13, 17, 23, 0.65); /* dark overlay for readability */
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin: 1em 0 1.5em;
+      color: #ccc;
+    }
+    .hero .cta-group > * { margin:0 0.5em; }
+
+    /* Platform Overview */
+    .platform .modules {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .module {
+      background:#161b22;
+      padding:2rem;
+      border-radius:8px;
+      text-align:center;
+    }
+    .module h3 { margin-bottom:0.5em; font-size:1.25rem; }
+    .module p { color:#bbb; }
+
+    /* Use Cases + Impact Background */
+    .use-cases,
+    .impact {
+      position: relative;
+      background: url('foto2.jpg') center/cover no-repeat;
+      color: #fff;
+      overflow: hidden;
+    }
+    .use-cases::before,
+    .impact::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(22, 27, 34, 0.85);
+      z-index: 0;
+    }
+    .use-cases > *,
+    .impact > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Use Cases */
+    .use-cases .cases-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:1.5rem;
+      margin-top:2rem;
+    }
+    .case-item {
+      background:#161b22;
+      padding:1.5rem;
+      border-radius:6px;
+    }
+    .case-item h4 { margin-bottom:0.5em; font-weight:600; }
+    .case-item p { color:#bbb; font-size:0.95rem; }
+
+    /* Customer Impact */
+    .impact .stats {
+      display:flex;
+      flex-wrap:wrap;
+      gap:2rem;
+      margin-top:2rem;
+    }
+    .stat {
+      flex:1 1 200px;
+      background:#161b22;
+      padding:2rem;
+      border-radius:8px;
+      text-align:center;
+    }
+    .stat h3 {
+      font-size:2rem;
+      color:#4f46e5;
+    }
+    .stat p { margin-top:0.5em; color:#ccc; }
+
+    /* Demo & Resources */
+    .demo .options {
+      display:flex;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background:#0d1117;
+      padding:40px 0;
+      color:#555;
+    }
+    footer .footer-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:1.5rem;
+      margin-bottom:1.5rem;
+    }
+    footer a { color:#888; font-size:0.95rem; }
+    footer p { font-size:0.85rem; }
+
+    /* Responsive text sizes */
+    @media (max-width:768px) {
+      .hero h1 { font-size:2.25rem; }
+      .hero p  { font-size:1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Kognaris understands your enterprise like no one else.</h1>
+      <p>Harness adaptive AI to drive secure, scalable decisions across your organization.</p>
+      <div class="cta-group">
+        <a href="#demo" class="btn btn-primary">Request Demo</a>
+        <a href="#platform" class="btn btn-secondary">Explore Platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Overview -->
+  <section id="platform" class="platform section container">
+    <h2>The Kognaris Intelligence Engine</h2>
+    <div class="modules">
+      <div class="module">
+        <h3>Knowledge Base</h3>
+        <p>Private AI that knows your company.</p>
+      </div>
+      <div class="module">
+        <h3>AI Workflows</h3>
+        <p>Transform your most critical business processes with the power of AI.</p>
+      </div>
+      <div class="module">
+        <h3>Centralized AI</h3>
+        <p>Take control of AI within your company.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="use-cases section container">
+    <h2>Built for Every Enterprise Domain</h2>
+    <div class="cases-grid">
+      <div class="case-item">
+        <h4>Finance</h4>
+        <p>Risk modeling & compliance automation.</p>
+      </div>
+      <div class="case-item">
+        <h4>Healthcare</h4>
+        <p>Operational intelligence.</p>
+      </div>
+      <div class="case-item">
+        <h4>Legal</h4>
+        <p>Unify knowledge to accelerate processes.</p>
+      </div>
+      <div class="case-item">
+        <h4>Retail</h4>
+        <p>Empower sales for your company.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Impact -->
+  <section class="impact section container">
+    <h2>Engineered for Enterprise-Scale Performance</h2>
+    <div class="stats">
+      <div class="stat">
+        <h3>Built for Scale</h3>
+        <p>Designed to support thousands of users and petabytes of data.</p>
+      </div>
+      <div class="stat">
+        <h3>Zero Friction</h3>
+        <p>Integrates seamlessly with existing enterprise systems.</p>
+      </div>
+      <div class="stat">
+        <h3>Future-Ready</h3>
+        <p>Modular, secure, and optimized for rapid innovation.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem; text-align:center; color:#aaa;">
+      Kognaris is currently onboarding select pilot partners. <a href="#demo" style="color:#4f46e5;">Join us</a> in shaping the future of enterprise AI.
+    </p>
+  </section>
+
+  <!-- Demo & Resources -->
+  <section id="demo" class="demo section container">
+    <h2>See Kognaris in Action</h2>
+    <div class="options">
+      <a href="#" class="btn btn-secondary">Watch Product Tour</a>
+      <a href="#" class="btn btn-secondary">Download Technical Brief</a>
+      <a href="#" class="btn btn-secondary">Schedule a Live Demo</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <p>© 2025 Kognaris. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
